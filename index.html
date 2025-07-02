@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bizbooks Elearning</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- ===== SIDEBAR (MENU) ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://bizbooks.vn/wp-content/uploads/2021/08/logo-bizbooks-new.svg" alt="Bizbooks Logo" class="logo">
+            </div>
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="avatar">
+                <span class="user-name">Trần Văn An</span>
+                <span class="user-role">Nhân viên Kinh doanh</span>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="menu-group-title">MENU CHÍNH</p>
+                <ul>
+                    <li><a href="#" class="active"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/1946/1946488.png')"></i><span>Bảng điều khiển</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/190/190515.png')"></i><span>Khóa học của tôi</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/4155/4155698.png')"></i><span>Lộ trình đào tạo</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/1531/1531333.png')"></i><span>Kết quả đánh giá</span></a></li>
+                </ul>
+                <p class="menu-group-title">CÁ NHÂN</p>
+                <ul>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/8089/8089727.png')"></i><span>Thông báo</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/1077/1077063.png')"></i><span>Hồ sơ</span></a></li>
+                    <li><a href="login.html"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/4034/4034229.png')"></i><span>Đăng xuất</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <!-- ===== HEADER ===== -->
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/7216/7216128.png')"></i>
+                    </button>
+                    <h1>Chào buổi sáng, An!</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Tìm kiếm khóa học...">
+                    </div>
+                    <button class="icon-btn">
+                        <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/2529/2529521.png')"></i>
+                    </button>
+                    <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="avatar-small">
+                </div>
+            </header>
+
+            <!-- ===== DASHBOARD GRID ===== -->
+            <div class="dashboard-grid">
+                <!-- KHÓA HỌC & QUY TRÌNH -->
+                <div class="card full-width" id="my-courses">
+                    <h3>Quy Trình Đào Tạo Của Bạn</h3>
+                    <div class="course-list">
+                        <!-- Dữ liệu này sẽ được lấy từ bảng `lophoc` và `chude` -->
+                        <div class="course-item">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d29ya3Nob3AsbWVldGluZ3x8fHx8fDE3MTcyNTMyNzY&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Course Image">
+                            <div class="course-info">
+                                <h4>Kỹ năng bán hàng chuyên nghiệp 2024</h4>
+                                <p>Hoàn thành 5/8 bài học</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 62%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-item">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8b2ZmaWNlLGNvbGxhYm9yYXRpb258fHx8fHwxNzE3MjUzMjkz&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080" alt="Course Image">
+                            <div class="course-info">
+                                <h4>Quy trình làm việc với khách hàng mới</h4>
+                                <p>Hoàn thành 8/8 bài học</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DASHBOARD TỔNG QUAN -->
+                <div class="card" id="overview-dashboard">
+                    <h3>Tổng Quan</h3>
+                    <!-- Dữ liệu này được tổng hợp từ `lophoc`, `danhgianl` -->
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-icon" style="background-color: #e0f7fa;">
+                                <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/10424/10424338.png')"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">Khóa đang học</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon" style="background-color: #e8f5e9;">
+                                <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/992/992051.png')"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">15</span>
+                                <span class="stat-label">Khóa hoàn thành</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                             <div class="stat-icon" style="background-color: #fff3e0;">
+                                <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/2920/2920325.png')"></i>
+                            </div>
+                            <div class="stat-info">
+                                <span class="stat-number">8.5</span>
+                                <span class="stat-label">Điểm TB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="myChart"></canvas>
+                </div>
+
+                <!-- THÀNH TỰU & TIN NHẮN -->
+                <div class="card" id="achievements-messages">
+                    <!-- Dữ liệu từ `lophoc` (cột chung_chi) và `thongbao` -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="achievements">Thành tựu</button>
+                        <button class="tab-btn" data-tab="messages">Tin nhắn (3)</button>
+                    </div>
+                    <div class="tab-content active" id="tab-achievements">
+                        <div class="achievement-grid">
+                            <div class="achievement-item">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3135/3135722.png" alt="Badge">
+                                <span>Bậc thầy bán hàng</span>
+                            </div>
+                            <div class="achievement-item">
+                                <img src="https://cdn-icons-png.flaticon.com/128/2422/2422132.png" alt="Badge">
+                                <span>Chuyên gia Excel</span>
+                            </div>
+                             <div class="achievement-item locked">
+                                <img src="https://cdn-icons-png.flaticon.com/128/5341/5341235.png" alt="Badge">
+                                <span>Nhà lãnh đạo</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="tab-messages">
+                       <ul class="message-list">
+                           <li class="message-item">
+                               <p class="message-title"><strong>[P.Đào tạo]</strong> Nhắc nhở hoàn thành khóa học Q3</p>
+                               <span class="message-time">2 giờ trước</span>
+                           </li>
+                           <li class="message-item">
+                               <p class="message-title"><strong>[Hệ thống]</strong> Bạn đã được cấp chứng chỉ "Kỹ năng mềm"</p>
+                               <span class="message-time">Hôm qua</span>
+                           </li>
+                           <li class="message-item">
+                               <p class="message-title"><strong>[Trưởng phòng]</strong> Đăng ký khóa học mới</p>
+                               <span class="message-time">2 ngày trước</span>
+                           </li>
+                       </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
