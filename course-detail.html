@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học của tôi - Bizbooks Elearning</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- ===== SIDEBAR (Dùng chung) ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="images/logo-biz-moi.png" alt="Bizbooks Logo" class="logo">
+            </div>
+            <div class="user-profile">
+                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="avatar">
+                <span class="user-name">Trần Văn An</span>
+                <span class="user-role">Nhân viên Kinh doanh</span>
+            </div>
+            <nav class="sidebar-nav">
+                <p class="menu-group-title">MENU CHÍNH</p>
+                <ul>
+                    <li><a href="index.html"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/1946/1946488.png')"></i><span>Bảng điều khiển</span></a></li>
+                    <!-- Active trang này -->
+                    <li><a href="my-courses.html" class="active"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/190/190515.png')"></i><span>Khóa học của tôi</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/4155/4155698.png')"></i><span>Lộ trình đào tạo</span></a></li>
+                    <li><a href="#"><i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/1531/1531333.png')"></i><span>Kết quả đánh giá</span></a></li>
+                </ul>
+                 <!-- ... (menu cá nhân) ... -->
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="icon" style="background-image: url('https://cdn-icons-png.flaticon.com/128/7216/7216128.png')"></i>
+                    </button>
+                    <h1>Khóa học của tôi</h1>
+                </div>
+                 <!-- ... (header-right giữ nguyên) ... -->
+            </header>
+
+            <!-- BỘ LỌC KHÓA HỌC -->
+            <div class="filter-bar">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">Tất cả (3)</button>
+                    <button class="filter-tab" data-filter="inprogress">Đang học (1)</button>
+                    <button class="filter-tab" data-filter="completed">Đã hoàn thành (2)</button>
+                </div>
+            </div>
+
+            <!-- DANH SÁCH KHÓA HỌC -->
+            <div class="course-grid">
+                <!-- Khóa học 1: Đang học -->
+                <div class="course-card" data-status="inprogress">
+                    <a href="course-detail.html" class="course-card-link">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800" class="course-image" alt="Kỹ năng bán hàng">
+                        <div class="course-content">
+                            <span class="course-tag">Bán hàng</span>
+                            <h4 class="course-title">Kỹ năng bán hàng chuyên nghiệp 2024</h4>
+                            <p class="course-instructor">Giảng viên: Nguyễn Văn B</p>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 62%;"></div>
+                                </div>
+                                <span class="progress-text">62%</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Khóa học 2: Đã hoàn thành -->
+                <div class="course-card" data-status="completed">
+                    <a href="course-detail.html" class="course-card-link">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800" class="course-image" alt="Quy trình làm việc">
+                        <div class="course-content">
+                            <span class="course-tag">Quy trình</span>
+                            <h4 class="course-title">Quy trình làm việc với khách hàng mới</h4>
+                            <p class="course-instructor">Giảng viên: Trần Thị C</p>
+                             <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <span class="progress-text">Hoàn thành</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                 <!-- Khóa học 3: Đã hoàn thành -->
+                <div class="course-card" data-status="completed">
+                    <a href="course-detail.html" class="course-card-link">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800" class="course-image" alt="Làm việc nhóm">
+                        <div class="course-content">
+                            <span class="course-tag">Kỹ năng mềm</span>
+                            <h4 class="course-title">Kỹ năng làm việc nhóm hiệu quả</h4>
+                            <p class="course-instructor">Phòng nhân sự</p>
+                             <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                                <span class="progress-text">Hoàn thành</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>
